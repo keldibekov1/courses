@@ -1,12 +1,13 @@
 import express from "express";
 import database from "./config/db.js";
-import CommentRoute from "./routes/comment.routes.js";
-
+import mainRoute from "./routes/index.js";
 
 let PORT = process.env.PORT || 4000;
 let app = express();
 
 app.use(express.json());
+
+app.use("/api", mainRoute)
 
 async function bootstaprt() {
   try {

@@ -6,4 +6,4 @@ let CommentRoute = Router()
 CommentRoute.get("/all", FindAll)
 
 
-export default CommentRoute
+export default CommentRoute;
