@@ -3,7 +3,7 @@ import { Sequelize } from "sequelize";
 let database = new Sequelize({
   database: "group",
   host: "localhost",
-  password: "12345678",
+  password: "5779",
   username: "root",
   dialect: "mysql",
   logging: false

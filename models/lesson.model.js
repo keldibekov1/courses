@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import database from "../config/db.js";
+import Course from "./course.model.js";
 
 const Lesson = database.define("lesson", {
     name: {

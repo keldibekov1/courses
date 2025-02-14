@@ -12,4 +12,4 @@ async function FindAll(req, res) {
 
 
 
-export {FindAll, FindOne}
+export {FindAll}

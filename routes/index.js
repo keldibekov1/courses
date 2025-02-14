@@ -6,5 +6,7 @@ let mainRoute = Router()
 
 mainRoute.use("/comment", CommentRoute)
 mainRoute.use("/lesson", LessonRoute)
+mainRoute.use("/course", courseRoute);
+mainRoute.use("/category", categoryRoute);
 
 export default mainRoute;

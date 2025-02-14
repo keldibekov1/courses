@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import database from "../config/db.js";
+import Course from "./course.model.js";
 
 const Comment = database.define("Comment", {
     authorId: {
@@ -29,6 +30,9 @@ const Comment = database.define("Comment", {
 } , {timestamps: true})
 
 User.hasMany(Comment, { foreignKey: "authorId", onDelete: "CASCADE" });
-Comment.belongsTo(User, { foreignKey: "authorId" });
+Comment.belongsTo(Course, { foreignKey: "authorId" });
+Course.hasMany(Comment, { foreignKey: "courseId", onDelete: "CASCADE" });
+Comment.belongsTo(Course, { foreignKey: "courseId" });
+
 
 export default Comment;
