@@ -17,6 +17,7 @@ const User = database.define("User", {
   type: {
     type: DataTypes.STRING,
     allowNull: false,
+    defaultValue: "student",
   },
   course: {
     type: DataTypes.STRING,
