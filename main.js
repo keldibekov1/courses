@@ -1,12 +1,20 @@
 import express from "express";
 import database from "./config/db.js";
-
+import authRouter from "./routes/auth.js";
+import setupSwagger from "./config/swagger.js";
 
 let PORT = process.env.PORT || 4000;
 let app = express();
 
 
 app.use(express.json());
+
+app.use("/auth", authRouter);
+
+
+
+
+setupSwagger(app);
 
 async function bootstaprt() {
   try {

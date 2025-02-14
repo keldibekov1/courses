@@ -1,11 +1,8 @@
 import { Sequelize } from "sequelize";
 
-let database = new Sequelize({
-  database: "n16",
+const database = new Sequelize("n16", "root", "1212", {
   host: "localhost",
-  password: "1212",
-  username: "root",
-  dialect: "mysql",
+  dialect: "mysql", 
 });
 
 export default database;
